@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rs.tut5.Controller">
+<GridPane alignment="center" hgap="10" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" >
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
@@ -26,21 +26,21 @@
       <ColumnConstraints halignment="CENTER" />
    </columnConstraints>
    <children>
-      <ListView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.rowSpan="5" />
+      <ListView fx:id="listKorisnik" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.rowSpan="5" />
       <Label text="Ime:" GridPane.columnIndex="1" />
       <Label text="Prezime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label text="E-Mail:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Label text="Korisničko ime" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Label text="Lozinka" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <PasswordField GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <TextField GridPane.columnIndex="2" />
+      <TextField fx:id="imeField" GridPane.columnIndex="2" />
+      <TextField fx:id="prezimeField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <TextField fx:id="mailField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TextField fx:id="usernameField" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <PasswordField fx:id="passwordField" GridPane.columnIndex="2" GridPane.rowIndex="4" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
         <buttons>
-          <Button mnemonicParsing="false" text="Dodaj" />
-            <Button mnemonicParsing="false" text="Kraj" />
+          <Button fx:id="btnDodaj" mnemonicParsing="false" onAction="#btnaddDodaj" text="Dodaj" />
+            <Button fx:id="btnKraj" mnemonicParsing="false" onAction="#btnaddKraj" text="Kraj" />
         </buttons>
       </ButtonBar>
    </children>
